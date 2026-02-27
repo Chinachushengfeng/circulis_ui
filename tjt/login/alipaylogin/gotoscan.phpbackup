@@ -1,0 +1,453 @@
+﻿ <!DOCTYPE html>
+<!-- saved from url=(0033)http://www.bootcss.com/p/flat-ui/ -->
+<html lang="en" class="dk_fouc has-js"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <title>Flat UI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Loading Bootstrap --> 
+    <!-- Loading Flat UI --> 
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+    <!-- Loading Flat UI --> 
+    <style type="text/css">
+	
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.main{
+				
+				margin-top:-400px;
+				display: inline-block;
+				height: 100%;
+				width: 100%;
+	 
+				position: absolute;
+			}
+			.input{
+				margin: 0 auto;
+				height: 30px;
+				width: 220px;
+				border-radius: 20px;
+				border: none;
+				margin-top: -10px;
+					margin-left: 10px;
+				outline: none;
+				padding-left: 10px;
+				color:#52957e;
+			}
+			#input{
+				position: relative;
+				margin: 0 auto;
+				margin-top: 10%;
+				height: 45px;
+				width: 230px;
+			}
+			#NumBtn{
+				margin: 0 auto;
+				height: 200px;
+				width: 230px;
+			}
+			#NumBtn ul{
+				list-style: none;
+				font-size: 0;
+			}
+			#NumBtn ul li{
+				display: inline-block;
+				height: 55px;
+				width: 55px;
+			    background-color: white;
+				border-radius:100px ;
+				text-align: center;
+				line-height: 50px;
+				list-style: none;
+				margin-left: 20px;
+				margin-top: 8px;
+				 
+			}
+			#NumBtn ul li button{
+				background-color: white;
+				border: none;
+				height: 0px;
+				width: 50px;
+				border-radius:100px ;
+				margin-top:10px;
+				font-size: 30px;
+				color:#52957e;
+			}
+			#zero{
+				height: 70px;
+				width: 230px;
+			}
+ 
+			
+			
+			body {
+	font-family:'Microsoft YaHei';
+ 		background-repeat: repeat;
+ 		background-image: linear-gradient(#0ea472, #0ea472);
+ 
+ 		 
+ 			font-family: "Arial Black", Gadget, sans-serif;
+ 		}
+			
+		 
+		
+		
+    body,td,th {
+	font-family: Lato, sans-serif;
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+
+.img{
+	
+border-radius:10%;
+
+	
+	
+	
+	
+	}
+    body {background-color: #16a673;
+
+ 			background-repeat: repeat;
+ 			background-image: linear-gradient(#16a673, #16a673);
+ 			font-family: "Arial Black", Gadget, sans-serif;
+}
+    </style>
+ 
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+     <![endif]-->
+  </head>  
+ </head>
+<body>
+	  <body leftmargin=0 topmargin=0 oncontextmenu='return false' ondragstart='return false' onselectstart ='return false' onselect='document.selection.empty()' oncopy='document.selection.empty()' onbeforecopy='return false' onmouseup='document.selection.empty()'>
+ 
+ 	<img src="background/paika.png" height="100%" align="right"> </img>
+ 	 <img src="background/050.png"   align="right" height="50%"  style="margin-left:80px;margin-top:80px;position:absolute"> </img>
+ 	 
+     <script type="text/javascript" src="js/timecountdown.js"></script>
+ 
+   <div align="left"  ><a href="../qsh.php" class="btn" style="margin-top:450px;margin-left:80px;position:absolute">
+   <?php 
+
+
+ include("IncDB.php");
+include("../../word_function/sql.php");
+echo select('Back');
+
+$sql = "update command set userscan='',isdonate=0  "; // doing=0,scan=0,longitude=0,latitude=0";
+mysqli_query($link, $sql);
+
+
+   ?>
+   </a> </div> 
+      
+<!--<img style="z-index:10" src="background/epd.png" width=90% > </img> -->
+
+
+
+
+
+
+
+
+
+
+<div style="margin-left:-10%;margin-top:-420px;">
+  <div style="margin-left:24%;margin-top:-30px;font-size:30px;font-weight : bold"> <strong> Please scan beneficiary  </strong>  </div>
+  
+  <div style="margin-left:17%;margin-top:0px;font-size:30px;font-weight : bold"> <strong>     member number or enter below  </strong>  </div>
+ <div>
+	
+     <script type="text/javascript" src="js/timecountdown.js"></script>
+ 
+   <div align="left"  >  
+  
+  
+  
+  
+  
+ 
+  
+  <div style='margin-left:350px;margin-top:1090px ;position:absolute' >
+ 
+ 
+  
+  
+  
+  <form action='qsh.php' method="get">   
+		<div class="main">
+			<div id="input">
+
+					<input onclick="input()"   id="inputmain" style='font-size:25px' name='userscan'  class="input" value="C"/>
+			</div>
+			<div id="NumBtn">
+				<ul>
+					<li><button type="button" value="1" onclick="btnclick(1)">1</button></li>
+					<li><button type="button" value="2" onclick="btnclick(2)">2</button></li>
+					<li><button type="button" value="3" onclick="btnclick(3)">3</button></li>
+					<li><button type="button" value="4" onclick="btnclick(4)">4</button></li>
+					<li><button type="button" value="5" onclick="btnclick(5)">5</button></li>
+					<li><button type="button" value="6" onclick="btnclick(6)">6</button></li>
+					<li><button type="button" value="7" onclick="btnclick(7)">7</button></li>
+					<li><button type="button" value="8" onclick="btnclick(8)">8</button></li>
+					<li><button type="button" value="9" onclick="btnclick(9)">9</button></li>
+			 
+				</ul>
+				<div id="zero">
+					<ul style="margin-left:0%">
+						  
+				 
+						<li><button type="button" onclick="btnDel()" style="font-size: 20px;font-weight: bold;margin-top:14px">DEL</button></li>
+					   <li><button type="button" value="0" onclick="btnclick(0)" style="font-size: 20px;font-weight: bold;margin-top:14px">0</button></li>
+					 
+					<li>  <a href='recycle/dorecycle.php'><button  value="0" style="font-size: 15px;font-weight: bold;margin-top:15px">  ENTER</button></li>
+					 </a>
+	 
+					</ul>
+				</div>
+			</div>
+			<div id="btn">
+		 
+  
+			 
+				
+				
+				</form>
+				
+				 
+			</div>
+		</div>
+		  </div>
+		  
+	 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <script language="javascript" type="text/javascript"> 
+// 以下方式直接跳转
+ 
+// 以下方式定时跳转
+setTimeout("javascript:location.href='../../index.php'",60000); 
+</script>
+ <embed height="0" width="0" src="../../sound/12.wav" />
+ 
+ 
+ 
+ <?php 
+ 
+ 
+date_default_timezone_set("Australia/Sydney");
+
+//此时写入transactionid
+$sql = "select *from  command";
+$result = mysqli_query($link, $sql);
+$result = mysqli_fetch_array($result);
+ $mid=$result['mid'];
+$transactionid = 'CIR'.strtoupper($mid).'0'.time();
+$sql = "update command set transactionid='$transactionid'"; //標記結束transaction    //每次在載入首頁時候會檢查是否有0標記並上傳。
+mysqli_query($link, $sql);
+
+//此时写入transactionid
+
+
+ $sql="UPDATE command SET userscan=''	";
+ mysqli_query($link,$sql);
+
+
+ 
+
+ ?>
+ 
+ 
+ 
+ 
+	   <script src="js/jquery-1.9.1.min.js"></script> 
+    <script>
+		$(function(){ 
+		    $("#btn").bind("click",{btn:$("#btn")},function(evdata){    
+		         $.ajax({    
+		                type:"POST",    
+		                dataType:"json",    
+		                url:"data.php",    
+		                timeout:80000000,     //ajax请求超时时间80秒    
+		                data:{time:"5000000000"}, //40秒后无论结果服务器都返回数据    
+		                success:function(data,textStatus){    
+		                    //从服务器得到数据，显示数据并继续查询    
+		                    if(data.success=="1"){  
+window.location.href=
+<?php 
+
+error_reporting(0);
+$mark=$_GET['mark'];
+
+ echo "'qsh.php?mark=$mark'" ;
+ 
+ ?>;  //'qsh.php'
+		                      $("#msg").append("<br>[1]"); 
+		                     evdata.data.btn.click();    
+ 
+		                    }    
+		                 //未从服务器得到数据，继续查询  
+
+else if(data.success=="5"){  
+window.location.href='qrerror.php';   
+		                      $("#msg").append("<br>[1]"); 
+		                     evdata.data.btn.click();    
+							 
+							 
+		                    }  
+							
+
+else if(data.success=="6"){  
+window.location.href='enderrorww.php?errorcode=consult'+data.name;   
+ 
+		                      $("#msg").append("<br>[1]"); 
+		                     evdata.data.btn.click();    
+							 
+							 
+		                    }  
+						 
+
+else if(data.success=="8"){  
+window.location.href='enderror.php?errorcode=consult'+data.name;   
+		                      $("#msg").append("<br>[1]"); 
+		                     evdata.data.btn.click();    
+							 
+							 
+		                    }  
+						 
+
+else if(data.success=="9"){  
+window.location.href='enderrorww.php?errorcode=consult'+data.name;  
+		                      $("#msg").append("<br>[1]"); 
+		                     evdata.data.btn.click();    
+							 
+							 
+		                    }  
+						  							
+		                   else{      
+		                    evdata.data.btn.click();    
+       $("#msg").append("<br>[0]"); 
+		                    }    
+		                },    
+		             //Ajax请求超时，继续查询    
+		             error:function(XMLHttpRequest,textStatus,errorThrown){    
+		                     if(textStatus=="timeout"){    
+		                         $("#msg").append("<br>[超时空白页]");    
+		                         evdata.data.btn.click();    
+		                     }    
+		             }    
+ 
+		            });    
+		    });    
+		        
+		});  
+	</script>
+	  <input id="btn" type="hidden" value="测试" />  
+  </p> 
+
+ 
+  
+<div id="msg" style="margin-top:700px"> </div>
+
+  <script type="text/javascript">
+// 两秒后模拟点击
+setTimeout(function() {
+// IE
+if(document.all) {
+document.getElementById("btn").click();
+}
+// 其它浏览器
+else {
+var e = document.createEvent("MouseEvents");
+e.initEvent("click", true, true);
+document.getElementById("btn").dispatchEvent(e);
+}
+}, 1000);
+     </script>
+	 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   
+  
+ 
+  <embed height="0" width="0" src="http://127.0.0.1/sound/Please scan the QR code or Go Back.wav" />
+
+ 
+ 
+</body></html>
