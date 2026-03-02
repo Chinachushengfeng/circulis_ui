@@ -3,6 +3,9 @@
 <html lang="en" class="dk_fouc has-js"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     
     <title>Flat UI</title>
+
+ 	<meta http-equiv="http://127.0.0.1/tjt" content="12">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Loading Bootstrap -->
