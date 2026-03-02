@@ -560,17 +560,11 @@ else
 	
   //成功
 				   
-						 $sql = "update ocl set addvaluetime='' "; //標記結束transaction    //每次在載入首頁時候會檢查是否有0標記並上傳。
-						mysqli_query($link, $sql);
+					 
 
 						 
-								if ($transactiondone = 0) {//還沒有點擊結算，很有可能是斷電。
-									$sql = "update user_transaction set transactiondone=1,uploaddone=1 where transactionid='$transactionid'"; //標記結束transaction    //每次在載入首頁時候會檢查是否有0標記並上傳。
+								$sql = "update user_transaction set uploaddone=1 where transactionid='$transactionid'"; //標記結束transaction    //每次在載入首頁時候會檢查是否有0標記並上傳。
 									mysqli_query($link, $sql);
-								} elseif ($transactiondone = 2) {  //已經點擊結算，結束了投樽之後的情況。
-									$sql = "update user_transaction set uploaddone=1 where transactionid='$transactionid'"; //標記結束transaction    //每次在載入首頁時候會檢查是否有0標記並上傳。
-									mysqli_query($link, $sql);
-								}
 								
 			 	
 						
