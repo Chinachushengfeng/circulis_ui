@@ -497,6 +497,7 @@ while ($attempt_number < $max_retries_count && !$request_successful) {
     curl_setopt(
         $curl_handle,
         CURLOPT_HTTPHEADER,
+        
         array('Content-Type: application/json; charset=utf-8')
     );
     curl_setopt($curl_handle, CURLOPT_SSL_VERIFYPEER, false);
@@ -506,7 +507,7 @@ while ($attempt_number < $max_retries_count && !$request_successful) {
     $response_data = curl_exec($curl_handle);
     $curl_error_number = curl_errno($curl_handle);
     
-    curl_close($curl_handle);
+    curl_close($curl_handle) ;
     
     // 检查是否有错误
     if ($curl_error_number == 0) {
@@ -538,9 +539,7 @@ while ($attempt_number < $max_retries_count && !$request_successful) {
     }
 }
 
-
  
-    curl_close($ch);
 }
 
 else  //如果沒有需要上傳的數據
