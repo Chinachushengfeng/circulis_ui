@@ -61,8 +61,63 @@ border-radius:10%;
  
  background-image: url(images/than.jpg);
 	
-}
-    </style>
+ 
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+      
+        .button {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .button:active {
+            background-color: #3d8b40;
+            transform: translateY(1px);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        }
+        .info {
+            color: #666;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+        .loading {
+            margin: 20px 0;
+        }
+        .loading-dots {
+            display: inline-block;
+            width: 50px;
+            text-align: left;
+        }
+        .loading-dots:after {
+            content: "...";
+            animation: dots 1.5s steps(4, end) infinite;
+        }
+        @keyframes dots {
+            0%, 20% { content: ""; }
+            40% { content: "."; }
+            60% { content: ".."; }
+            80%, 100% { content: "..."; }
+        }
+		</style>
  
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
     <!--[if lt IE 9]>
@@ -73,10 +128,23 @@ border-radius:10%;
   
   <body leftmargin=0 topmargin=0 oncontextmenu='return false' ondragstart='return false' onselectstart='return false' onselect='document.selection.empty()' oncopy='document.selection.empty()' onbeforecopy='return false'>
   
-  -->
+ 
+     <div style='margin-top:200px;margin-left:-700px;font-size:7px'>
+        <div >
+            <p>Page is processing<span class="loading-dots"></span></p>
+            <p>If not  redirected.<p>please click the button below.</p>
+        </div>
+        <div class="loading">
+            <a href="http://127.0.0.1/tjt" class="button">Go to First Page →</a>
+        </div>
+        <div class="info">
+            <small>Auto redirect in 12 seconds...</small>
+        </div>
+    </div>
    
-   
-   
+     -->
+
+     
 <?php
 
 
