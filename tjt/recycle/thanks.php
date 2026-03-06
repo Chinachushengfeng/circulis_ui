@@ -371,6 +371,7 @@ while ($attempt < $max_retries && $response === false) {
     curl_setopt($ch, CURLOPT_TIMEOUT, 28);
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
     curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+	curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
     
     $response = curl_exec($ch);
     $curl_error = curl_error($ch);
@@ -565,7 +566,8 @@ while ($attempt_number < $max_retries_count && !$request_successful) {
     curl_setopt($curl_handle, CURLOPT_POST, 1);
     curl_setopt($curl_handle, CURLOPT_POSTFIELDS, $data);
     curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($curl_handle, CURLOPT_TIMEOUT, 28);
+	curl_setopt($curl_handle, CURLOPT_CONNECTTIMEOUT, 5); // 连接超时
+	curl_setopt($curl_handle, CURLOPT_TIMEOUT, 28);  
     curl_setopt(
         $curl_handle,
         CURLOPT_HTTPHEADER,
@@ -573,8 +575,7 @@ while ($attempt_number < $max_retries_count && !$request_successful) {
         array('Content-Type: application/json; charset=utf-8')
     );
     curl_setopt($curl_handle, CURLOPT_SSL_VERIFYPEER, false);
-    curl_setopt($curl_handle, CURLOPT_SSL_VERIFYHOST, false);
-    curl_setopt($curl_handle, CURLOPT_SSLVERSION, 1);
+    curl_setopt($curl_handle, CURLOPT_SSL_VERIFYHOST, false); 
     
     $response_data = curl_exec($curl_handle);
     $curl_error_number = curl_errno($curl_handle);
