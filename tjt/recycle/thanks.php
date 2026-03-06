@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿<?php
+// 放在文件最开头，任何输出之前
+header("Refresh: 12; url=http://127.0.0.1/tjt");
+?>
+<!DOCTYPE html>
 <!-- saved from url=(0033)http://www.bootcss.com/p/flat-ui/ -->
 <html lang="en" class="dk_fouc has-js"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     
