@@ -88,7 +88,7 @@
 
 <script>
 
-fetch(opendoor.php);
+fetch('opendoor.php');
 </script>
 
 
