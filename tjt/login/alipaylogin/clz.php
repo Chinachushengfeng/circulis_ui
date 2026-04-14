@@ -101,7 +101,7 @@ $nowtime= date('Y-m-d H:i:s', $nowtime);
 		));
 		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 		curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
-		curl_setopt($ch, CURLOPT_SSLVERSION, 1);
+		//curl_setopt($ch, CURLOPT_SSLVERSION, 1);
 		$response = curl_exec($ch);
 
 	 
